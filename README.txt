@@ -1,11 +1,40 @@
-NAME
+	NAME
     streamplot
 
 DESCRIPTION
     Name: Streamer
     Author: rotem.tal
     Description: A tool for printing and clustring streamplots
-    
+
+USAGE
+	Run this script from the command line with no arguments to create a configuration file via user friendly interface
+	
+	
+	streamplot.py [-h] [--configuration CFG] [--subject_matrix SUB]
+                     [--delim DELIM1] [--meta META] [--meta_delimiter DELIM2]
+                     [--meta_sheet SHEET] [--cluster C C C C] [--plot P]
+                     [--folder F] [--events [EVENTS [EVENTS ...]]]
+
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  --configuration CFG   Path to StreamPlot Configuration file (.SCG)
+	  --subject_matrix SUB  Path to subject microbiome reads
+	  --delim DELIM1        Optional: Subject matrix delimiter (default is ",")
+	  --meta META           Path to Meta-data file (as csv, xls, xlsx)
+	  --meta_delimiter DELIM2
+							Metadata delimiter (default is ",")
+	  --meta_sheet SHEET    Metadata sheet name (for Excel files)
+	  --cluster C C C C     Cluster subjects and plot clusters, parameters: Number
+							of dominant bacteria to consider Matching threshold
+							Time threshold Delta
+	  --plot P              Plot all inserted subjects
+	  --folder F            Folder to save to, default is "Plots"
+	  --events [EVENTS [EVENTS ...]]
+							Add events from the meta data. Optional arguments (as
+							ordered): Event name (default "Onset") Meta data
+							subject ID column (default "record_id") Event columns,
+							Time column and events identifier (e.g. "Symptomatic",
+							"Case" etc.)
 
 CLASSES
     builtins.object
